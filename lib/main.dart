@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.yellow,
           title: Text("Belajar Flutter"),
         ),
+        body: Center(
+          child: Text("Hello World"),
+        ),
       ),
     );
   }

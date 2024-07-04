@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/container_widget.dart';
 import 'package:myapp/latihan/latihan.dart';
+import 'package:myapp/listview/list_basic.dart';
+import 'package:myapp/listview/list_builder.dart';
+import 'package:myapp/listview/list_example.dart';
+import 'package:myapp/listview/list_separated.dart';
 import 'package:myapp/row/row_widget.dart';
 
 
@@ -21,7 +25,7 @@ const MyApp ({Key? key}): super(key:key);
           style: TextStyle(color: Colors.black)),
         centerTitle: true,
         ),
-        body: Latihan(),
+        body: ListExample(),
       ),
     );
   }

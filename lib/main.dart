@@ -1,31 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/container_widget.dart';
-import 'package:myapp/latihan/latihan.dart';
-import 'package:myapp/listview/list_basic.dart';
-import 'package:myapp/listview/list_builder.dart';
-import 'package:myapp/listview/list_example.dart';
-import 'package:myapp/listview/list_separated.dart';
-import 'package:myapp/row/row_widget.dart';
+import 'package:myapp/galaksis/homeGalax_screen.dart';
+import 'package:myapp/galaksis/about_screen.dart';
+import 'package:myapp/galaksis/galaksi_screen.dart';
+import 'package:myapp/screens/home_screen.dart';
+import 'package:myapp/screens/wisata_screen.dart';
+// import 'package:myapp/screens/nyoba.dart';
 
-
-void main(){
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-const MyApp ({Key? key}): super(key:key);
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Scaffold(
+      routes:{
+        '/about': (context) => const AboutGalaxScreen(),
+        '/home': (context)=> const HomeGalaxScreen(),
+        // '/wisata': (context)=> ListWisataScreen(),
+        '/galaksi': (context)=> ListGalaksiScreen(),
+        // '/nyoba': (context)=> Nyoba()
+      },
+      initialRoute: '/home',
+      home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 192, 29, 29),
-          title: Text("Belajar Flutter",
-          style: TextStyle(color: Colors.black)),
-        centerTitle: true,
+          title: Text('Belajar Flutter'),
+          centerTitle: true,
+          backgroundColor: Colors.redAccent,
         ),
-        body: ListExample(),
+        body: HomeGalaxScreen(),
       ),
     );
   }
